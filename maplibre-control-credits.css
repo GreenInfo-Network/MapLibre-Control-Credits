@@ -1,0 +1,10 @@
+div.maplibre-control-credits {
+}
+
+div.maplibre-control-credits a {
+    background: white;
+}
+
+div.maplibre-control-credits img {
+    display: block;
+}

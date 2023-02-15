@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Demo: Maplibre-Control-Credits</title>
+
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+
+    <style>
+    html, body {
+        margin: 0;
+    }
+    #map {
+        width: 100vw;
+        height: 100vh;
+        background-color: silver;
+    }
+    </style>
+
+    <script src="maplibre-control-credits.js"></script>
+    <link rel="stylesheet" href="maplibre-control-credits.css" />
+
+    <script>
+    let MAP;
+    window.addEventListener('DOMContentLoaded', () => {
+        MAP = new maplibregl.Map({
+            container: 'map',
+            style: 'https://demotiles.maplibre.org/style.json', // stylesheet location
+            center: [0, 0],
+            zoom: 1,
+        });
+
+        const credits = new MaplibreControlCredits({
+            linkUrl: "https://greeninfo.org/",
+            imageUrl: "./greeninfo.png",
+        });
+        MAP.addControl(credits, 'bottom-right');
+    });
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+</html>
