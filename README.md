@@ -4,7 +4,7 @@ A MapLibre control to add a logo & hyperlink to your map.
 
 Demo = https://greeninfo-network.github.io/MapLibre-Control-Credits/
 
-Github = https://github.com/GreenInfo-Network/MapLibre-Control-Credits/settings/pages
+Github = https://github.com/GreenInfo-Network/MapLibre-Control-Credits/
 
 
 ## Usage
@@ -16,6 +16,8 @@ const credits = new MaplibreControlCredits({
 });
 MAP.addControl(credits, 'bottom-right');
 ```
+
+Constructor parameters:
 
 * `linkUrl` -- The hyperlink will have this URL as its `href`
 * `imageUrl` -- The URL of the image to display. Can be relative, absolute, or even inline data.
