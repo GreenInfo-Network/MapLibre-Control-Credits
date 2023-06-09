@@ -11,7 +11,7 @@ class MaplibreControlCredits {
         const div = document.createElement('div');
         div.className = 'mapboxgl-ctrl mapboxgl-ctrl-group maplibre-control-credits';
 
-        div.innerHTML = `<a href="${this.options.linkUrl}" target="_blank"><img src="${this.options.imageUrl}" alt="${this.options.imageAlt}" /></a>`;
+        div.innerHTML = `<a href="${this.options.linkUrl}"><img src="${this.options.imageUrl}" alt="${this.options.imageAlt}" /></a>`;
 
         return div;
     }
