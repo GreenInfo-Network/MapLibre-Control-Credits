@@ -13,6 +13,7 @@ Github = https://github.com/GreenInfo-Network/MapLibre-Control-Credits/
 const credits = new MaplibreControlCredits({
     linkUrl: "https://greeninfo.org/",
     imageUrl: "./greeninfo.png",
+    imageAlt: "Green Info",
 });
 MAP.addControl(credits, 'bottom-right');
 ```
@@ -21,7 +22,7 @@ Constructor parameters:
 
 * `linkUrl` -- The hyperlink will have this URL as its `href`
 * `imageUrl` -- The URL of the image to display. Can be relative, absolute, or even inline data.
-
+* `imageAlt` -- The text alternative of the image, which also serves as link text in this case. Needed to make the image and link accessible to blind and visually impaired people, also gets displayed when the image fails to load.
 
 This control is intentionally minimal and lightweight, since the needs for custom behaviors vary so widely. You can adjust the CSS in **maplibre-control-credits.css** to adjust the size of the image, or to apply CSS transforms if necessary..
 

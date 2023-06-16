@@ -8,3 +8,16 @@ div.maplibre-control-credits a {
 div.maplibre-control-credits img {
     display: block;
 }
+
+/* Add a 2px outline to the image on :focus */
+/* Needs to be on the img in this case because safari & chrome rendering bug */
+div.maplibre-control-credits a:focus img {
+  outline: 2px solid black;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Remove the focus outline from links that have an image */
+div.maplibre-control-credits a:focus:has(img){
+  outline: none;
+}
